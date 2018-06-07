@@ -1,0 +1,34 @@
+<html>
+{{> header}}
+
+
+<body>
+    
+    
+      
+        <header>
+            
+               {{navigation}}
+           
+        </header>
+    
+{{#post}}
+<div class="home home-article">
+    <article itemscope itemtype="http://schema.org/BlogPosting" class="{{post_class}}">
+    <h1 itemprop="headline">{{title}}</h1>
+    <span hidden itemprop="author">{{author}}</span>
+    <section itemprop="articleBody">
+        {{content}}
+    </section>
+        
+    </article>
+</div>
+
+
+
+{{/post}}
+
+
+</body>
+
+ {{> footer}}

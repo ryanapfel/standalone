@@ -1,0 +1,35 @@
+<html>
+    
+{{> header}}
+    
+<body>
+    
+      
+        <header>  
+               {{navigation}}
+            
+        </header>
+    
+
+    <div class="home home-photos">
+        
+        <div class="photo_board">
+            {{#get "posts" limit="all"  filter="tags:photos" }}
+                {{#foreach posts}}
+                <article class="photo-class" style="{{excerpt}}">
+                    <a  href="{{url}}" ><img class="photo" src="{{img_url feature_image}}"></a>
+                </article>
+
+            {{/foreach}}
+            {{/get}}
+        </div>
+    
+
+    </div>
+    
+    
+</body>
+
+ {{> footer}}
+
+    
